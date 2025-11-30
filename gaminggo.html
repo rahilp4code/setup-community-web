@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetupScape | Community PC Setups Showcase</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Inter font -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0F172A; /* Slate 900 */
+            color: #E2E8F0; /* Slate 200 */
+        }
+        /* Custom scrollbar for a smoother look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1E293B; /* Slate 800 */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4F46E5; /* Indigo 600 */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6366F1; /* Indigo 500 */
+        }
+    </style>
+</head>
+<body class="min-h-screen antialiased">
+
+    <!-- Tailwind Config for Custom Colors/Setup -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#4F46E5', // Indigo 600
+                        'accent': '#6366F1',  // Indigo 500
+                        'dark-bg': '#0F172A', // Slate 900
+                        'card-bg': '#1E293B', // Slate 800
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Header / Navigation Bar -->
+    <header class="bg-dark-bg sticky top-0 z-50 shadow-lg border-b border-card-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-extrabold text-primary tracking-tight">SetupScape</a>
+                </div>
+                
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex space-x-6">
+                    <a href="#" class="text-sm font-medium hover:text-primary transition duration-150">Browse Builds</a>
+                    <a href="#" class="text-sm font-medium hover:text-primary transition duration-150">Submit Setup</a>
+                    <a href="#" class="text-sm font-medium hover:text-primary transition duration-150">Leaderboard</a>
+                    <a href="#" class="text-sm font-medium hover:text-primary transition duration-150">Community</a>
+                </nav>
+
+                <!-- Auth/Profile Button -->
+                <div class="flex items-center space-x-4">
+                    <button class="hidden md:inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg shadow-sm text-white bg-primary hover:bg-accent transition duration-300 transform hover:scale-105">
+                        <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        Sign In
+                    </button>
+                    <!-- Mobile Menu Button -->
+                    <button type="button" class="md:hidden p-2 text-gray-400 hover:text-white rounded-lg hover:bg-card-bg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
+        <!-- Hero Section -->
+        <section class="text-center py-16 mb-12 bg-card-bg rounded-2xl shadow-2xl border border-gray-700/50">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-4">
+                Showcase Your <span class="text-primary">Masterpiece.</span>
+            </h1>
+            <p class="mt-3 text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto mb-8">
+                Explore thousands of custom PC builds and gaming setups. Find inspiration, rate gear, and share your own battle station with the global community.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <button class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-xl shadow-lg text-white bg-primary hover:bg-accent transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-primary/50">
+                    Browse Latest Setups
+                </button>
+                <button class="inline-flex items-center justify-center px-8 py-3 border border-primary text-base font-medium rounded-xl text-primary bg-transparent hover:bg-primary/10 transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-primary/50">
+                    Submit Your Build
+                </button>
+            </div>
+        </section>
+
+        <!-- Featured Builds Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-white mb-8 border-l-4 border-primary pl-4">🔥 Trending Setups This Week</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                
+                <!-- Setup Card Component (1) -->
+                <div class="bg-card-bg rounded-xl shadow-xl overflow-hidden group hover:shadow-primary/50 transition duration-300 border border-gray-700">
+                    <div class="h-48 overflow-hidden">
+                        <!-- Placeholder Image (Use a real URL in production) -->
+                        <img src="https://placehold.co/600x400/1E293B/9CA3AF?text=The+Nebula+Commander" 
+                             alt="PC Setup: The Nebula Commander" 
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-xl font-semibold text-white truncate mb-1">The Nebula Commander</h3>
+                        <p class="text-sm text-gray-400 flex items-center mb-4">
+                            <svg class="w-4 h-4 mr-1 text-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
+                            Posted by <span class="text-primary ml-1 hover:underline cursor-pointer">@ByteMaster</span>
+                        </p>
+                        <div class="flex justify-between items-center text-sm text-gray-400">
+                            <span class="flex items-center">
+                                <svg class="w-4 h-4 mr-1 text-red-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path></svg>
+                                4.8K Likes
+                            </span>
+                            <span class="flex items-center">
+                                <svg class="w-4 h-4 mr-1 text-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"></path><path d="M15 7v2a4 4 0 01-4 4H9.586l-1.707 1.707A2 2 0 016 16v-2.414l3.707-3.707A2 2 0 0112 9V7h3z"></path></svg>
+                                350 Comments
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Setup Card Component (2) -->
+                <div class="bg-card-bg rounded-xl shadow-xl overflow-hidden group hover:shadow-primary/50 transition duration-300 border border-gray-700">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://placehold.co/600x400/1E293B/9CA3AF?text=Minimal+Workstation+v2" 
+                             alt="PC Setup: Minimal Workstation v2" 
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-xl font-semibold text-white truncate mb-1">Minimal Workstation v2</h3>
+                        <p class="text-sm text-gray-400 flex items-center mb-4">
+                            <svg class="w-4 h-4 mr-1 text-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
+                            Posted by <span class="text-primary ml-1 hover:underline cursor-pointer">@CleanBuilds</span>
+                        </p>
+                        <div class="flex justify-between items-center text-sm text-gray-400">
+                            <span class="flex items-center">
+                                <svg class="w-4 h-4 mr-1 text-red-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path></svg>
+                                3.1K Likes
+                            </span>
+                            <span class="flex items-center">
+                                <svg class="w-4 h-4 mr-1 text-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"></path><path d="M15 7v2a4 4 0 01-4 4H9.586l-1.707 1.707A2 2 0 016 16v-2.414l3.707-3.707A2 2 0 0112 9V7h3z"></path></svg>
+                                188 Comments
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Setup Card Component (3) -->
+                <div class="bg-card-bg rounded-xl shadow-xl overflow-hidden group hover:shadow-primary/50 transition duration-300 border border-gray-700">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://placehold.co/600x400/1E293B/9CA3AF?text=RGB+Overload" 
+                             alt="PC Setup: RGB Overload" 
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-xl font-semibold text-white truncate mb-1">Project: RGB Overload</h3>
+                        <p class="text-sm text-gray-400 flex items-center mb-4">
+                            <svg class="w-4 h-4 mr-1 text-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
+                            Posted by <span class="text-primary ml-1 hover:underline cursor-pointer">@NeonGamer</span>
+                        </p>
+                        <div class="flex justify-between items-center text-sm text-gray-400">
+                            <span class="flex items-center">
+                                <svg class="w-4 h-4 mr-1 text-red-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path></svg>
+                                6.2K Likes
+                            </span>
+                            <span class="flex items-center">
+                                <svg class="w-4 h-4 mr-1 text-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"></path><path d="M15 7v2a4 4 0 01-4 4H9.586l-1.707 1.707A2 2 0 016 16v-2.414l3.707-3.707A2 2 0 0112 9V7h3z"></path></svg>
+                                512 Comments
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Setup Card Component (4) -->
+                <div class="hidden lg:block bg-card-bg rounded-xl shadow-xl overflow-hidden group hover:shadow-primary/50 transition duration-300 border border-gray-700">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://placehold.co/600x400/1E293B/9CA3AF?text=Pro+Streamer+HQ" 
+                             alt="PC Setup: Pro Streamer HQ" 
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-xl font-semibold text-white truncate mb-1">Pro Streamer HQ</h3>
+                        <p class="text-sm text-gray-400 flex items-center mb-4">
+                            <svg class="w-4 h-4 mr-1 text-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
+                            Posted by <span class="text-primary ml-1 hover:underline cursor-pointer">@TwitchGod</span>
+                        </p>
+                        <div class="flex justify-between items-center text-sm text-gray-400">
+                            <span class="flex items-center">
+                                <svg class="w-4 h-4 mr-1 text-red-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path></svg>
+                                2.9K Likes
+                            </span>
+                            <span class="flex items-center">
+                                <svg class="w-4 h-4 mr-1 text-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"></path><path d="M15 7v2a4 4 0 01-4 4H9.586l-1.707 1.707A2 2 0 016 16v-2.414l3.707-3.707A2 2 0 0112 9V7h3z"></path></svg>
+                                98 Comments
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Components & Gear Spotlight -->
+        <section class="mb-16 bg-card-bg p-8 rounded-2xl border border-gray-700">
+            <h2 class="text-3xl font-bold text-white mb-6">💡 Component Spotlight</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                <div class="bg-dark-bg p-6 rounded-lg hover:bg-gray-700 transition duration-300">
+                    <p class="text-2xl font-bold text-primary mb-2">CPUs</p>
+                    <p class="text-gray-400">Intel i9 vs AMD Ryzen</p>
+                </div>
+                <div class="bg-dark-bg p-6 rounded-lg hover:bg-gray-700 transition duration-300">
+                    <p class="text-2xl font-bold text-primary mb-2">GPUs</p>
+                    <p class="text-gray-400">RTX 5000 Series Guide</p>
+                </div>
+                <div class="bg-dark-bg p-6 rounded-lg hover:bg-gray-700 transition duration-300">
+                    <p class="text-2xl font-bold text-primary mb-2">Monitors</p>
+                    <p class="text-gray-400">High Refresh Rate Picks</p>
+                </div>
+                <div class="bg-dark-bg p-6 rounded-lg hover:bg-gray-700 transition duration-300">
+                    <p class="text-2xl font-bold text-primary mb-2">Keyboards</p>
+                    <p class="text-gray-400">Mechanical vs Optical</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA for Submission -->
+        <section class="bg-primary/10 p-10 rounded-2xl text-center border border-primary/50">
+            <h2 class="text-3xl font-bold text-white mb-3">Ready to Join the Ranks?</h2>
+            <p class="text-lg text-gray-300 mb-6">Upload your photos, list your specs, and get feedback from the world's best build community.</p>
+            <button class="inline-flex items-center px-10 py-3 border border-transparent text-lg font-bold rounded-xl shadow-2xl text-white bg-primary hover:bg-accent transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-primary/50">
+                <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path></svg>
+                Upload My Setup Now
+            </button>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-card-bg mt-12 border-t border-gray-700/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <!-- Column 1: Logo & Mission -->
+                <div>
+                    <h3 class="text-xl font-extrabold text-primary mb-3">SetupScape</h3>
+                    <p class="text-sm text-gray-400">The premier destination for showcasing and exploring PC builds from around the globe.</p>
+                </div>
+                
+                <!-- Column 2: Discover -->
+                <div>
+                    <h4 class="text-base font-semibold text-white mb-3">Discover</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-primary">Newest Builds</a></li>
+                        <li><a href="#" class="hover:text-primary">Highest Rated</a></li>
+                        <li><a href="#" class="hover:text-primary">Gaming Setups</a></li>
+                        <li><a href="#" class="hover:text-primary">Workstations</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 3: Company -->
+                <div>
+                    <h4 class="text-base font-semibold text-white mb-3">Company</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-primary">About Us</a></li>
+                        <li><a href="#" class="hover:text-primary">Contact</a></li>
+                        <li><a href="#" class="hover:text-primary">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-primary">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Follow Us -->
+                <div>
+                    <h4 class="text-base font-semibold text-white mb-3">Connect</h4>
+                    <div class="flex space-x-4">
+                        <!-- Simple social media placeholders (using Lucide icons) -->
+                        <a href="#" class="text-gray-400 hover:text-primary transition"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586L6 14M4 16l3-3m0 0l-3-3m3 3h16"></path></svg></a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M6.29 18.251c7.545 0 11.675-6.253 11.675-11.675 0-.178-.004-.355-.012-.533A8.348 8.348 0 0020 2.25a8.22 8.22 0 01-2.357.646 4.116 4.116 0 001.805-2.27 8.222 8.222 0 01-2.605.996C15.228 1.845 13.801 1 12.235 1c-2.924 0-5.286 2.37-5.286 5.292 0 .416.058.82.17 1.206-4.39-2.227-8.29-4.675-10.9-8.471C.31 1.7 1 .845 1.5 1.5l.5 1.5A3.766 3.766 0 001 5.385v.19c0 2.392 1.34 4.417 3.325 5.5A4.332 4.332 0 011.05 11.5v.08c0 1.97 1.127 3.72 2.75 4.675a8.216 8.216 0 01-4.225 1.15c-.473 0-.943-.048-1.4-.136a5.278 5.278 0 004.856 2.846 10.569 10.569 0 01-6.7 2.388c-.43 0-.853-.025-1.27-.07A14.656 14.656 0 00.5 18.251"></path></svg></a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10s4.477 10 10 10c5.523 0 10-4.484 10-10S15.523 0 10 0zm2.748 15.345l-1.99-.007a.2.2 0 01-.19-.204v-2.316a.2.2 0 01.203-.198c.552.007 1.11-.005 1.663.003a.2.2 0 01.198.205v2.314a.2.2 0 01-.19.204zM10.01 4.5c-2.003 0-3.626 1.62-3.626 3.62c0 2.003 1.623 3.62 3.626 3.62s3.626-1.62 3.626-3.62c0-2.002-1.623-3.62-3.626-3.62z" clip-rule="evenodd"></path></svg></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 pt-6 border-t border-gray-700 text-center text-sm text-gray-500">
+                &copy; 2024 SetupScape. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
