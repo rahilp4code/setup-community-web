@@ -71,9 +71,17 @@ export default function Layout({ children }) {
               {/* <button className="rounded-full border border-cyan-400/70 bg-slate-950/60 px-3 py-1 text-xs font-medium tracking-wide text-cyan-100 shadow-[0_0_18px_rgba(34,211,238,0.5)] hover:border-cyan-300 hover:text-white">
                 Log in
               </button> */}
-              <button className="rounded-full bg-cyan-400 px-3.5 py-1.5 text-xs font-semibold tracking-wide text-slate-950 shadow-[0_0_25px_rgba(34,211,238,0.7)] hover:bg-cyan-300">
+              {/* <a className="rounded-full bg-cyan-400 px-3.5 py-1.5 text-xs font-semibold tracking-wide text-slate-950 shadow-[0_0_25px_rgba(34,211,238,0.7)] hover:bg-cyan-300">
                 Join community
-              </button>
+              </a> */}
+              <a 
+        href="https://x.com/RahilP4Code?t=UcRvdEsR79yTdiJjvGzFEA" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="rounded-full bg-cyan-400 px-5 py-2 text-xs font-semibold tracking-wide text-slate-950 shadow-[0_0_25px_rgba(34,211,238,0.7)] hover:bg-cyan-300"
+      >
+        Join community
+      </a>
             </div>
           </div>
 
@@ -122,7 +130,7 @@ export default function Layout({ children }) {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-slate-800 bg-[#020617]/95">
+      {/* <footer className="border-t border-slate-800 bg-[#020617]/95">
         <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 sm:px-6 lg:px-8 py-4 text-[11px] text-slate-500 md:flex-row md:items-center md:justify-between">
           <div className="flex flex-wrap items-center gap-3">
             <span>© {new Date().getFullYear()} PC Setup Hub</span>
@@ -136,7 +144,58 @@ export default function Layout({ children }) {
             <button className="hover:text-cyan-300">Instagram</button>
           </div>
         </div>
-      </footer>
+      </footer> */}
+      <footer className="border-t border-slate-800 bg-[#020617]/95">
+  <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 sm:px-6 lg:px-8 py-4 text-[11px] text-slate-500 md:flex-row md:items-center md:justify-between">
+    
+    <div className="flex flex-wrap items-center gap-3">
+      <span>© {new Date().getFullYear()} PC Setup Hub</span>
+      <span className="hidden sm:inline">•</span>
+
+      <a 
+        href="https://x.com/RahilP4Code?t=UcRvdEsR79yTdiJjvGzFEA" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="hover:text-cyan-300"
+      >
+        About
+      </a>
+
+      <a 
+        href="https://x.com/RahilP4Code?t=UcRvdEsR79yTdiJjvGzFEA" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="hover:text-cyan-300"
+      >
+        Contact
+      </a>
+    </div>
+
+    <div className="flex items-center gap-3">
+      <span className="text-slate-500">Join us:</span>
+
+      <a 
+        href="https://x.com/RahilP4Code?t=UcRvdEsR79yTdiJjvGzFEA" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="hover:text-cyan-300"
+      >
+        Discord
+      </a>
+
+      <a 
+        href="https://x.com/RahilP4Code?t=UcRvdEsR79yTdiJjvGzFEA" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="hover:text-cyan-300"
+      >
+        Instagram
+      </a>
+    </div>
+    
+  </div>
+</footer>
+
     </div>
   );
 }

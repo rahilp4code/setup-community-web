@@ -119,12 +119,21 @@ export default function HomePage() {
           </div>
 
           <div className="flex flex-wrap items-center gap-3">
-            <button className="rounded-xl bg-cyan-400 px-4 py-2 text-sm font-semibold text-slate-950 shadow-[0_0_30px_rgba(34,211,238,0.8)] hover:bg-cyan-300">
+            {/* <button className="rounded-xl bg-cyan-400 px-4 py-2 text-sm font-semibold text-slate-950 shadow-[0_0_30px_rgba(34,211,238,0.8)] hover:bg-cyan-300">
               Browse community builds
-            </button>
-            <button className="rounded-xl border border-cyan-500/50 bg-slate-950/60 px-4 py-2 text-sm font-medium text-cyan-100 hover:border-cyan-300">
+            </button> */}
+            <Link to='/browse' className="rounded-xl bg-cyan-400 px-4 py-2 text-sm font-semibold text-slate-950 shadow-[0_0_30px_rgba(34,211,238,0.8)] hover:bg-cyan-300">
+              Browse community builds
+            </Link>
+            {/* <button className="rounded-xl border border-cyan-500/50 bg-slate-950/60 px-4 py-2 text-sm font-medium text-cyan-100 hover:border-cyan-300">
               Upload my setup 🚀
-            </button>
+            </button> */}
+            <Link
+              to="/submit"
+              className="inline-block rounded-xl border border-cyan-500/50 bg-slate-950/60 px-4 py-2 text-sm font-medium text-cyan-100 hover:border-cyan-300"
+            >
+              Upload my build 🚀
+            </Link>
           </div>
 
           <div className="flex flex-wrap gap-4 text-[11px] text-slate-400">
