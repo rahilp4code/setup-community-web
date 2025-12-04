@@ -1,0 +1,40 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Glow Shadow -->
+  <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="rgba(34,211,238,0.6)" />
+  </filter>
+
+  <!-- Background Rounded Square -->
+  <rect
+    x="6"
+    y="6"
+    width="52"
+    height="52"
+    rx="14"
+    fill="url(#grad)"
+    stroke="rgba(34,211,238,0.6)"
+    stroke-width="2"
+    filter="url(#shadow)"
+  />
+
+  <!-- Gradient -->
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(34,211,238,0.4)" />
+      <stop offset="100%" stop-color="rgba(217,70,239,0.4)" />
+    </linearGradient>
+  </defs>
+
+  <!-- Text -->
+  <text
+    x="50%"
+    y="50%"
+    text-anchor="middle"
+    dominant-baseline="middle"
+    font-size="22"
+    font-weight="bold"
+    fill="white"
+  >
+    SP
+  </text>
+</svg>
